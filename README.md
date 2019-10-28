@@ -8,3 +8,4 @@ Type in "git clone " and paste in the link you previously copied.
 Wait for it to download
 Open the folder and click open "WebApplication2.sln" in visual studio
 Run the solution by clicking IIS Express (has a green play button icon next to it)
+
