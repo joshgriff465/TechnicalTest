@@ -1,0 +1,120 @@
+﻿@{
+    ViewData["Title"] = "Section3";
+}
+    <body>
+        <div class="bgImage3"  style="width: 100%">
+            <div class="col-md-4 third-panel-box" id="FirstSlide" style="display: block;">
+                <h2 class="box-heading">Heading <br />Level<br />One<br /></h2>
+                <p class="third-panel-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <hr class="Black" />
+                <a href="#" style="font-weight: bold; font-size: 0.75rem; color:black; text-shadow: none;padding: 0 3% 5% 10%;">
+                    Our Asset Portfolio
+                    <img src="~/Images/Green_Arrow_Right.png" width="30" height="20" alt="Company logo" />
+                </a>
+                <br />
+                <br />
+                <div class="row" style="float:right;">
+                    <button class="third-panel-arrows arrow-left" onclick="btnBack();"></button>
+                    <button class="third-panel-arrows arrow-right" onclick="btnNext();"></button>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-4 third-panel-box" id="SecondSlide" style="display: none;">
+                <h2 class="box-heading">Heading <br />Level<br />Two<br /></h2>
+                <p class="third-panel-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <hr class="Black" />
+                <a href="#" style="font-weight: bold; font-size: 0.75rem; color:black; text-shadow: none;padding: 0 3% 5% 10%;">
+                    Our Asset Portfolio
+                    <img src="~/Images/Green_Arrow_Right.png" width="30" height="20" alt="Company logo" />
+                </a>
+                <br />
+                <br />
+                <div class="row" style="float:right;">
+                    <button class="third-panel-arrows arrow-left" onclick="btnBack();"></button>
+                    <button class="third-panel-arrows arrow-right" onclick="btnNext();"></button>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-4 third-panel-box" id="ThirdSlide" style="display: none;">
+                <h2 class="box-heading">Heading <br />Level<br />Three<br /></h2>
+                <p class="third-panel-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <hr class="Black" />
+                <a href="#" style="font-weight: bold; font-size: 0.75rem; color:black; text-shadow: none;padding: 0 3% 5% 10%;">
+                    Our Asset Portfolio
+                    <img src="~/Images/Green_Arrow_Right.png" width="30" height="20" alt="Company logo" />
+                </a>
+                <br />
+                <br />
+                <div class="row" style="float:right;">
+                    <button class="third-panel-arrows arrow-left" onclick="btnBack();"></button>
+                    <button class="third-panel-arrows arrow-right" onclick="btnNext();"></button>
+                </div>
+            </div>
+            <br />
+
+        </div>
+
+
+    </body>
+    <script type="text/javascript">
+        function btnBack()
+        {
+            if (document.getElementById('FirstSlide').style.display == 'block')
+            {
+                document.getElementById('FirstSlide').style.display = 'none';
+                document.getElementById('ThirdSlide').style.display = 'block';
+                document.getElementById('SecondSlide').style.display = 'none';
+            }
+            else if (document.getElementById('SecondSlide').style.display == 'block')
+            {
+                document.getElementById('FirstSlide').style.display = 'block';
+                document.getElementById('ThirdSlide').style.display = 'none';
+                document.getElementById('SecondSlide').style.display = 'none';
+            }
+            else if (document.getElementById('ThirdSlide').style.display == 'block')
+            {
+                document.getElementById('FirstSlide').style.display = 'none';
+                document.getElementById('ThirdSlide').style.display = 'none';
+                document.getElementById('SecondSlide').style.display = 'block';
+            }
+
+            
+        }
+        function btnNext()
+        {
+            if (document.getElementById('FirstSlide').style.display == 'block')
+            {
+                document.getElementById('FirstSlide').style.display = 'none';
+                document.getElementById('ThirdSlide').style.display = 'none';
+                document.getElementById('SecondSlide').style.display = 'block';
+            }
+            else if (document.getElementById('SecondSlide').style.display == 'block')
+            {
+                document.getElementById('FirstSlide').style.display = 'none';
+                document.getElementById('ThirdSlide').style.display = 'block';
+                document.getElementById('SecondSlide').style.display = 'none';
+            }
+            else if (document.getElementById('ThirdSlide').style.display == 'block')
+            {
+                document.getElementById('FirstSlide').style.display = 'block';
+                document.getElementById('ThirdSlide').style.display = 'none';
+                document.getElementById('SecondSlide').style.display = 'none';
+            }
+        }
+    </script>

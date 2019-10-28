@@ -1,0 +1,108 @@
+﻿@using Microsoft.AspNetCore.Http;
+@using System.Security.Claims;
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              crossorigin="anonymous"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+
+        <link rel="stylesheet" href="~/lib/bootstrap-datepicker/css/bootstrap-datepicker.min.css" />
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+                crossorigin="anonymous"></script>
+    </environment>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
+    <header style="margin-bottom: 0px; padding-bottom: 0px;">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm mb-3" style="background-color:#024F69; padding-bottom: 0px; margin-bottom: 0px; opacity: 0.7 ;position:absolute; z-index: 1000; width: 100%">
+            <div class="container col-md-3">
+                <a class="navbar-brand nav-text" href="#">
+                    <img src="~/Images/logo-small-white.png" width="40" height="30" alt="Company logo">
+                    Company name
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse col-md-5">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="navbar-brand nav-text" asp-area="" asp-controller="Home" asp-action="Index">Section 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-brand nav-text" asp-controller="Home" asp-action="Section2">Section 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-brand nav-text"asp-controller="Home" asp-action="Section3">Section 3</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    @RenderBody()
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 pl-5 pr-4">
+                    <img src="~/Images/logo-small-black (1).png" height="60" width="80" style="padding:1% 3% 1% 3%; margin-left: 12%" alt="Jones and palmer logo" />
+                    <p style="color: black">© 2019 Jones and palmer</p>
+                </div>
+
+                <div class="col-md-2 pl-3 pr-4">
+
+                </div>
+
+                <div class="col-md-4 pl-3 pr-4" style="float:right;">
+                    <div class="pb-3" style="float:right">
+                        <button class="btn btn-link" id="langEnglish">Accessibility</button> | <button class="btn btn-link" id="langWelsh">Privacy Policy</button> | <button class="btn btn-link">Sitemap</button> <button class="btn btn-link btn-up"></button>
+                    </div>
+                    <br />
+                    <img src="~/Images/logo-full-black.png" class="logo" alt="Jones and palmer logo" />
+                </div>
+                <div class="col-md-1 pl-3 pr-4">
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <environment include="Development">
+
+    </environment>
+    <environment exclude="Development">
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    </environment>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

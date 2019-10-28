@@ -1,0 +1,294 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+    <body>
+            <div class="bgImage1" style="width: 100%;">
+                <div class="marquee">
+                    <h3> Marquee for company that highlights recent events or important information that the user may want to see </h3>
+                </div>
+                <h1 class="Image-text">Company name</h1>
+                <div style="padding-left:15%; padding-right:15%; text-align: center">
+                    Maecenas sit amet gravida orci, in porta metus. Cras pharetra augue eu purus laoreet lobortis. Nunc vel lacinia magna. Curabitur in magna et mi finibus lobortis ac tincidunt nisi. In ante leo, mattis eu nulla at, dictum auctor magna.<br /> <br />
+                    <small>Integer non ipsum mattis, ultrices nunc ac, consectetur erat. Etiam venenatis placerat purus non fringilla. Pellentesque sit amet porta ipsum, id maximus ligula. Nam placerat aliquam dolor condimentum porttitor. Sed a nunc in est vehicula porttitor a et purus. Sed nulla elit, porttitor a erat non, feugiat vehicula arcu.</small><br /><br />
+                    <a href="#" style="font-weight: bold; font-size: 1rem; color:white;">
+                        Read more
+                        <img src="~/Images/Green_Arrow_Right.png" width="30" height="20" alt="Company logo" />
+                    </a><br /><br />
+                    <button style="background-color: transparent; border:none;" data-toggle="collapse" data-target="#ReadMore">
+                        <img src="~/Images/Collapse-Down-White.png" width="30" height="20" alt="Company logo" />
+                    </button>
+                    <div id="ReadMore" class="collapse">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                </div>
+                <br />
+            </div>
+        <div class="bgImage2" style="width: 100%;">
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row" style="width: 80%; margin-left: 10%">
+                            <div class="col-md-3 box ">
+                                <div class="inner-box">
+                                    <h1 class="panel2-heading">Heading 2</h1>
+                                    <ul class="box-text">
+                                        @foreach (var part in ViewBag.Bullet)
+                                        {
+                                            <li>@part</li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3 box">
+                                <div class="inner-box">
+                                    <h1 class="panel2-heading">Heading 2</h1>
+                                    <p class="box-text">@ViewBag.File[1]</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 box">
+                                <div class="inner-box">
+                                    <h1 class="panel2-heading">Heading 2</h1>
+                                    <ul class="box-text">
+                                        @foreach (var part in ViewBag.Bullet2)
+                                        {
+                                            <li>@part</li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row" style="width: 80%; margin-left: 10%">
+                            <div class="col-md-3 box ">
+                                <div class="inner-box">
+                                    <h1 class="panel2-heading">Heading 3</h1>
+                                    <ul class="box-text">
+                                        @foreach (var part in ViewBag.Bullet)
+                                        {
+                                            <li>@part</li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3 box">
+                                <div class="inner-box">
+                                    <h1 class="panel2-heading">Heading 3</h1>
+                                    <p class="box-text">@ViewBag.File[1]</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 box">
+                                <div class="inner-box">
+                                    <h1 class="panel2-heading">Heading 3</h1>
+                                    <ul class="box-text">
+                                        @foreach (var part in ViewBag.Bullet2)
+                                        {
+                                            <li>@part</li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row" style="width: 80%; margin-left: 10%">
+                            <div class="col-md-3 box ">
+                                <div class="inner-box">
+                                    <h1 class="panel2-heading">Heading 4</h1>
+                                    <ul class="box-text">
+                                        @foreach (var part in ViewBag.Bullet)
+                                        {
+                                            <li>@part</li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3 box">
+                                <div class="inner-box">
+                                    <h1 class="panel2-heading">Heading 4</h1>
+                                    <p class="box-text">@ViewBag.File[1]</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 box">
+                                <div class="inner-box">
+                                    <h1 class="panel2-heading">Heading 4</h1>
+                                    <ul class="box-text">
+                                        @foreach (var part in ViewBag.Bullet2)
+                                        {
+                                            <li>@part</li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" onclick="BackClick();" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" id="btnNext" onclick="NextClick();" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <br />
+            <hr class="White" />
+            <label id="SlideNum" value="1/3" class="slide-label" style="float:right">1/3</label>
+
+
+        </div>
+
+
+        <div class="bgImage3"  style="width: 100%">
+            <div class="col-md-4 third-panel-box" id="FirstSlide" style="display: block;">
+                <h2 class="box-heading">Heading <br />Level<br />One<br /></h2>
+                <p class="third-panel-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <hr class="Black" />
+                <a href="#" style="font-weight: bold; font-size: 0.75rem; color:black; text-shadow: none;padding: 0 3% 5% 10%;">
+                    Our Asset Portfolio
+                    <img src="~/Images/Green_Arrow_Right.png" width="30" height="20" alt="Company logo" />
+                </a>
+                <br />
+                <br />
+                <div class="row" style="float:right;">
+                    <button class="third-panel-arrows arrow-left" onclick="btnBack();"></button>
+                    <button class="third-panel-arrows arrow-right" onclick="btnNext();"></button>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-4 third-panel-box" id="SecondSlide" style="display: none;">
+                <h2 class="box-heading">Heading <br />Level<br />Two<br /></h2>
+                <p class="third-panel-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <hr class="Black" />
+                <a href="#" style="font-weight: bold; font-size: 0.75rem; color:black; text-shadow: none;padding: 0 3% 5% 10%;">
+                    Our Asset Portfolio
+                    <img src="~/Images/Green_Arrow_Right.png" width="30" height="20" alt="Company logo" />
+                </a>
+                <br />
+                <br />
+                <div class="row" style="float:right;">
+                    <button class="third-panel-arrows arrow-left" onclick="btnBack();"></button>
+                    <button class="third-panel-arrows arrow-right" onclick="btnNext();"></button>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-4 third-panel-box" id="ThirdSlide" style="display: none;">
+                <h2 class="box-heading">Heading <br />Level<br />Three<br /></h2>
+                <p class="third-panel-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <hr class="Black" />
+                <a href="#" style="font-weight: bold; font-size: 0.75rem; color:black; text-shadow: none;padding: 0 3% 5% 10%;">
+                    Our Asset Portfolio
+                    <img src="~/Images/Green_Arrow_Right.png" width="30" height="20" alt="Company logo" />
+                </a>
+                <br />
+                <br />
+                <div class="row" style="float:right;">
+                    <button class="third-panel-arrows arrow-left" onclick="btnBack();"></button>
+                    <button class="third-panel-arrows arrow-right" onclick="btnNext();"></button>
+                </div>
+            </div>
+            <br />
+
+        </div>
+
+
+    </body>
+    <script type="text/javascript">
+        function NextClick()
+        {
+            var currText = document.getElementById('SlideNum').textContent;
+
+            if (currText == "1/3")
+                document.getElementById('SlideNum').textContent = "2/3";
+
+            else if (currText == "2/3")
+                document.getElementById('SlideNum').textContent = "3/3";
+            
+            else 
+                document.getElementById('SlideNum').textContent = "1/3";
+            
+        }
+         function BackClick()
+        {
+            var currText = document.getElementById('SlideNum').textContent;
+
+            if (currText == "1/3")
+                document.getElementById('SlideNum').textContent = "3/3";
+
+            else if (currText == "2/3")
+                document.getElementById('SlideNum').textContent = "1/3";
+            
+            else 
+                document.getElementById('SlideNum').textContent = "2/3";
+            
+        }
+        function btnBack()
+        {
+            if (document.getElementById('FirstSlide').style.display == 'block')
+            {
+                document.getElementById('FirstSlide').style.display = 'none';
+                document.getElementById('ThirdSlide').style.display = 'block';
+                document.getElementById('SecondSlide').style.display = 'none';
+            }
+            else if (document.getElementById('SecondSlide').style.display == 'block')
+            {
+                document.getElementById('FirstSlide').style.display = 'block';
+                document.getElementById('ThirdSlide').style.display = 'none';
+                document.getElementById('SecondSlide').style.display = 'none';
+            }
+            else if (document.getElementById('ThirdSlide').style.display == 'block')
+            {
+                document.getElementById('FirstSlide').style.display = 'none';
+                document.getElementById('ThirdSlide').style.display = 'none';
+                document.getElementById('SecondSlide').style.display = 'block';
+            }
+
+            
+        }
+        function btnNext()
+        {
+            if (document.getElementById('FirstSlide').style.display == 'block')
+            {
+                document.getElementById('FirstSlide').style.display = 'none';
+                document.getElementById('ThirdSlide').style.display = 'none';
+                document.getElementById('SecondSlide').style.display = 'block';
+            }
+            else if (document.getElementById('SecondSlide').style.display == 'block')
+            {
+                document.getElementById('FirstSlide').style.display = 'none';
+                document.getElementById('ThirdSlide').style.display = 'block';
+                document.getElementById('SecondSlide').style.display = 'none';
+            }
+            else if (document.getElementById('ThirdSlide').style.display == 'block')
+            {
+                document.getElementById('FirstSlide').style.display = 'block';
+                document.getElementById('ThirdSlide').style.display = 'none';
+                document.getElementById('SecondSlide').style.display = 'none';
+            }
+        }
+    </script>
